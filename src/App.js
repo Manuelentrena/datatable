@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import DataTableBase from "./DataTableBase";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataTableBase
+        title="Movie List" // titulo
+        expandableRows={true} // expandir la fila
+        expandOnRowClicked={true} // expande la fila al hacer click en toda la fila
+        selectableRows // para poder seleccionar filas
+        responsive={true}
+        subHeaderWrap={false}
+        noHeader={false} // que no se vea la cabezera
+        direction="auto" // "auto", "ltr", "rtl"
+        disabled={false} // desabilitar todo datatable
+        fixedHeader={false}
+      />
     </div>
   );
 }
